@@ -15,5 +15,5 @@ e.g. `./bin/aise ./bin/array-1.c`
 ### version
 `./bin/aise --version `
 
-## about AISE
-AFA I know, our approach is new and it is different with related works. Currently AISE has no publications. The prototype of AISE is very basic, we just implemented funmental functions, and haven't yet polished the tool at the implementation level. We believe that the final version of AISE can achieve remarkable performance, at least the approach can support inspiration for other people.
+## About AISE
+Our approach is new and it is different with related works. Currently AISE has no publications. The prototype of AISE is very basic, we just implemented funmental functions, and haven't yet polished the tool at the implementation level. We believe AISE is valuable, at least the approach can provide inspiration for other people.
