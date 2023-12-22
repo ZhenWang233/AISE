@@ -4,7 +4,7 @@ AISE is a static verifier that combines abstract interpretation and symbolic exe
 
 ## Implementation
 AISE is implemented mainly based on Clam ([https://github.com/seahorn/clam](https://github.com/seahorn/clam)) and KLEE ([https://github.com/klee/klee](https://github.com/klee/klee)).
-we also integrated ESBMC([https://github.com/esbmc/esbmc](https://github.com/seahorn/clam)) to handle programs with float data, because AISE is weak at handling float data. When AISE detects that the program contains float data, it will switch to ESBMC to verify such programs. Once AISE identifies the presence of floating-point data in a program, it will transition to using ESBMC for the verification of such programs. 
+we also integrated ESBMC([https://github.com/esbmc/esbmc](https://github.com/seahorn/clam)) to handle programs with float data, because AISE is unable to handle float data. When AISE detects that the program contains float data(less than 50 programs contain float data in the ReachSafety-Loops category), it calls ESBMC to verify such programs. (AISE didn't link against ESBMC, it just calls it in special cases. So it doesn't violate the ESBMC's license).
 
 This artifact "aise.zip" is for AISE SV-Comp 2024. It's the first time we try to participate in SV-COMP, we only focus on a single category "Reachability-Loops".
 The tool is also publicly available at https://doi.org/10.5281/zenodo.10201159.
